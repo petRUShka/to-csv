@@ -39,7 +39,7 @@ After that, if you need to globally configure the gem, just create a <i>to_csv.r
   ToCSV.timestamps        = true
   ToCSV.locale            = 'en-US'
   ToCSV.primary_key       = false
-  ToCSV.csv_options       = { :col_sep => ',', :row_sep => "\r\n" }
+  ToCSV.csv_options       = { :col_sep => ',', :row_sep => "\r\n", :encoding => 'UTF-8' }
 
 
 == Examples
