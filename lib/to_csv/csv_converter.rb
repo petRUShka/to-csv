@@ -31,6 +31,10 @@ module ToCSV
         @rows.each { |row| csv << row }
       end
 
+      if RUBY_VERSION >= "1.9"
+        output.force_encoding @csv_options[:encoding] if @csv_options[:encoding]
+      end
+
       @opts[:byte_order_marker] ? "\xEF\xBB\xBF#{output}" : output
     end
 
